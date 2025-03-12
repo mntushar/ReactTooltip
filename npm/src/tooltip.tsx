@@ -1,6 +1,6 @@
 import { Fragment, ReactNode, useEffect, useState } from "react";
 
-import 'react-tooltip-component/dist/tooltip.css'
+import 'react-tooltip-com/dist/tooltip.css'
 import React from "react";
 
 interface TooltipProps {

@@ -1,6 +1,7 @@
 'use client'
 
-import Tooltip from "../../../src/tooltip";
+import { Tooltip } from "react-tooltip-com";
+// import Tooltip from "../../../src/tooltip";
 
 import styles from "./page.module.css";
 
