@@ -1,6 +1,6 @@
 {
   "name": "react-tooltip-com",
-  "version": "1.0.1",
+  "version": "1.0.4",
   "description": "A simple React tooltip component with customizable position.",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -20,7 +20,6 @@
     "npm",
     "package",
     "next",
-    "next-virtual-dropdown",
     "next-tooltip"
   ],
   "author": "M N Tushar",

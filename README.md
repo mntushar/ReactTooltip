@@ -12,8 +12,6 @@ A simple React tooltip component with customizable position.
 
 ### Setup
 ```
-'use client'
-
 import { Tooltip } from "react-tooltip-com";
 
 import styles from "./page.module.css";
