@@ -12,79 +12,39 @@ A simple React tooltip component with customizable position.
 
 ### Setup
 ```
-'use client'
+import { Tooltip } from "react-tooltip-com";
 
-import { SelectItem, SelectorRequest, VirtualSelector } from "react-virtual-dropdown";
-import { useCallback, useEffect, useState } from "react";
+import styles from "./page.module.css";
+
 
 export default function Home() {
-  const [selectedData, setSelectedData] = useState<string>('');
-  const fetchData = useCallback(async (request: SelectorRequest) => {
-    try {
-      const params = new URLSearchParams({
-            skip: request.startIndex.toString(),
-            limit: request.limit.toString(),
-            sortColumn: 'name',
-            sortOrder: '',
-            searchKey: request.searchKey ?? '',
-        });
-      const url = `https://your_url/comments?${params}`;
-      const response = await fetch(url);
-      if(!response.ok) throw new Error();
-      const data = await response.json();
-      const itemData = data.map(({ id, email }: { id: number, email: number }) => ({
-        id: id.toString(), 
-        name: email.toString() 
-      }));
-  
-      const countUrl = `http://your_url/count?searchKey=${request.searchKey}`;
-      const countResponse = await fetch(countUrl);
-      if(!countResponse.ok) throw new Error();
-      const count = await countResponse.json();
-      return {
-        items: itemData,
-        totalCount: count,
-      };
-    } catch (error) {
-      console.error("Error fetching data:", error);
-      return {
-        items: [],
-        totalCount: 0,
-      };
-    }
-  }, []);
-
-  const getValue = (data: SelectItem) => {
-    console.log(data.id, data.name);
-  };
-
-  const getSetData = async () => {
-    const countUrl = `http://your_url/your-data-id`;
-      const countResponse = await fetch(countUrl);
-      if(!countResponse.ok) throw new Error();
-      const data = await countResponse.json();
-      setSelectedData(data);
-  };
-
-  useEffect(() => {
-      getSetData()
-  }, [])
-
   return (
     <div className={styles.page}>
-      <h1>Alhadmulilah</h1>
-      <div style={{width: "500px"}}>
-      <VirtualSelector
-          fetchData={fetchData}
-          height={400}
-          rowHeight={35}
-          placeholder="Select Dropdown"
-          selectedData={selectedData}
-          callBack={getValue} />
+      <h1>Alhamdulillah</h1>
+      <div>
+        <Tooltip text="Hi, I am Tooltip" possition='right'>
+          <span>Tooltip</span>
+        </Tooltip>
+      </div>
+      <div>
+        <Tooltip text="Hi, I am Tooltip" possition='left'>
+          <span>Tooltip</span>
+        </Tooltip>
+      </div>
+      <div>
+        <Tooltip text="Hi, I am Tooltip" possition='top'>
+          <span>Tooltip</span>
+        </Tooltip>
+      </div>
+      <div>
+        <Tooltip text="Hi, I am Tooltip" possition='bottom'>
+          <span>Tooltip</span>
+        </Tooltip>
       </div>
     </div>
   );
 }
+
 ```
 Now you're ready to start using the components.
 
