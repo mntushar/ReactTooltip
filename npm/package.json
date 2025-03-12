@@ -1,0 +1,42 @@
+{
+  "name": "react-tooltip-com",
+  "version": "1.0.0",
+  "description": "A simple React tooltip component with customizable position.",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsup && node src/remove-assets.js && node src/copy-assets.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mntushar/ReactTooltip.git"
+  },
+  "keywords": [
+    "react-tooltip",
+    "react-tooltip-component",
+    "react-tooltip-comp",
+    "typescript",
+    "npm",
+    "package",
+    "next",
+    "next-virtual-dropdown",
+    "next-tooltip"
+  ],
+  "author": "M N Tushar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mntushar/ReactTooltip/issues"
+  },
+  "homepage": "https://github.com/mntushar/ReactTooltip#readme",
+  "devDependencies": {
+    "@types/react": "^19.0.10",
+    "ts-loader": "^9.5.2",
+    "tsup": "^8.4.0",
+    "typescript": "^5.8.2"
+  },
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  }
+}
