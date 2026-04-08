@@ -1,6 +1,6 @@
 {
   "name": "react-tooltip-com",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "description": "A simple React tooltip component with customizable position.",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -35,7 +35,7 @@
     "typescript": "^5.8.2"
   },
   "dependencies": {
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4"
   }
 }
